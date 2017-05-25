@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="WViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOT-eF-9SZ">
+                                <rect key="frame" x="43" y="120" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91w-Jn-lTj">
+                                <rect key="frame" x="43" y="185" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe3-lG-wOc">
+                                <rect key="frame" x="157" y="255" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Av-vd-Usn"/>
+                                    <constraint firstAttribute="width" constant="60" id="o5r-8P-cUe"/>
+                                </constraints>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginAction" destination="whP-gf-Uak" eventType="touchUpInside" id="cFk-fJ-ED7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOT-eF-9SZ" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="27" id="8on-aw-OkO"/>
+                            <constraint firstItem="xe3-lG-wOc" firstAttribute="top" secondItem="91w-Jn-lTj" secondAttribute="bottom" constant="40" id="Dts-t3-6Hg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOT-eF-9SZ" secondAttribute="trailing" constant="28" id="G7J-uE-ENO"/>
+                            <constraint firstItem="91w-Jn-lTj" firstAttribute="top" secondItem="MOT-eF-9SZ" secondAttribute="bottom" constant="35" id="SYV-ud-X6l"/>
+                            <constraint firstItem="xe3-lG-wOc" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="i07-F0-WxG"/>
+                            <constraint firstItem="91w-Jn-lTj" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="27" id="k3S-Ze-Sjr"/>
+                            <constraint firstItem="MOT-eF-9SZ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="100" id="n1D-HG-kZn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="91w-Jn-lTj" secondAttribute="trailing" constant="28" id="puR-TU-Ohf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="xe3-lG-wOc" id="w2x-Nt-cah"/>
+                        <outlet property="password" destination="91w-Jn-lTj" id="PPj-9h-BtK"/>
+                        <outlet property="userName" destination="MOT-eF-9SZ" id="Nv4-VB-b3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+        </scene>
+    </scenes>
+</document>
