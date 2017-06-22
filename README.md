@@ -49,7 +49,7 @@
 
 * ` https://github.com/zhidian2017/WekerIMSDK_iOS`  该网址是SDK的Demo地址，可以作为参考
 
-* 把`AppDelegate.h`文件中引入SDK头文件` <WekerIM/WekerIM.h>`
+* 把`AppDelegate.m`文件中引入SDK头文件` <WekerIM/WekerIM.h>`
 
   ```objective-c
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
