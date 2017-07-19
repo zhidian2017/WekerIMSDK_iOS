@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C390D221F1F1938007B3395 /* WSelectEstateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C390D161F1F1938007B3395 /* WSelectEstateView.m */; };
+		0C390D231F1F1938007B3395 /* WSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C390D181F1F1938007B3395 /* WSectionHeaderView.m */; };
+		0C390D241F1F1938007B3395 /* WEstateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C390D1A1F1F1938007B3395 /* WEstateCollectionViewCell.xib */; };
+		0C390D251F1F1938007B3395 /* WEstateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C390D1B1F1F1938007B3395 /* WEstateCollectionViewCell.m */; };
+		0C390D261F1F1938007B3395 /* WEntranceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C390D1D1F1F1938007B3395 /* WEntranceTableViewCell.xib */; };
+		0C390D271F1F1938007B3395 /* WEntranceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C390D1E1F1F1938007B3395 /* WEntranceTableViewCell.m */; };
+		0C390D281F1F1938007B3395 /* WDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C390D201F1F1938007B3395 /* WDeviceViewController.m */; };
 		0C67067D1ECD90CE00EB271F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6706771ECD90CE00EB271F /* Main.storyboard */; };
-		0C67067E1ECD90CE00EB271F /* WDevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6706791ECD90CE00EB271F /* WDevicesTableViewController.m */; };
-		0C67067F1ECD90CE00EB271F /* WDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C67067B1ECD90CE00EB271F /* WDeviceTableViewCell.m */; };
-		0C6706801ECD90CE00EB271F /* WDeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C67067C1ECD90CE00EB271F /* WDeviceTableViewCell.xib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,12 +42,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C390D161F1F1938007B3395 /* WSelectEstateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSelectEstateView.m; sourceTree = "<group>"; };
+		0C390D171F1F1938007B3395 /* WSelectEstateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSelectEstateView.h; sourceTree = "<group>"; };
+		0C390D181F1F1938007B3395 /* WSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSectionHeaderView.m; sourceTree = "<group>"; };
+		0C390D191F1F1938007B3395 /* WSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSectionHeaderView.h; sourceTree = "<group>"; };
+		0C390D1A1F1F1938007B3395 /* WEstateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEstateCollectionViewCell.xib; sourceTree = "<group>"; };
+		0C390D1B1F1F1938007B3395 /* WEstateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEstateCollectionViewCell.m; sourceTree = "<group>"; };
+		0C390D1C1F1F1938007B3395 /* WEstateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEstateCollectionViewCell.h; sourceTree = "<group>"; };
+		0C390D1D1F1F1938007B3395 /* WEntranceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEntranceTableViewCell.xib; sourceTree = "<group>"; };
+		0C390D1E1F1F1938007B3395 /* WEntranceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEntranceTableViewCell.m; sourceTree = "<group>"; };
+		0C390D1F1F1F1938007B3395 /* WEntranceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEntranceTableViewCell.h; sourceTree = "<group>"; };
+		0C390D201F1F1938007B3395 /* WDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDeviceViewController.m; sourceTree = "<group>"; };
+		0C390D211F1F1938007B3395 /* WDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDeviceViewController.h; sourceTree = "<group>"; };
 		0C6706771ECD90CE00EB271F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		0C6706781ECD90CE00EB271F /* WDevicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDevicesTableViewController.h; sourceTree = "<group>"; };
-		0C6706791ECD90CE00EB271F /* WDevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDevicesTableViewController.m; sourceTree = "<group>"; };
-		0C67067A1ECD90CE00EB271F /* WDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDeviceTableViewCell.h; sourceTree = "<group>"; };
-		0C67067B1ECD90CE00EB271F /* WDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDeviceTableViewCell.m; sourceTree = "<group>"; };
-		0C67067C1ECD90CE00EB271F /* WDeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDeviceTableViewCell.xib; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WekerIMSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WekerIMSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,12 +138,19 @@
 				6003F59D195388D20070C39A /* WAppDelegate.m */,
 				6003F5A5195388D20070C39A /* WViewController.h */,
 				6003F5A6195388D20070C39A /* WViewController.m */,
+				0C390D161F1F1938007B3395 /* WSelectEstateView.m */,
+				0C390D171F1F1938007B3395 /* WSelectEstateView.h */,
+				0C390D181F1F1938007B3395 /* WSectionHeaderView.m */,
+				0C390D191F1F1938007B3395 /* WSectionHeaderView.h */,
+				0C390D1A1F1F1938007B3395 /* WEstateCollectionViewCell.xib */,
+				0C390D1B1F1F1938007B3395 /* WEstateCollectionViewCell.m */,
+				0C390D1C1F1F1938007B3395 /* WEstateCollectionViewCell.h */,
+				0C390D1D1F1F1938007B3395 /* WEntranceTableViewCell.xib */,
+				0C390D1E1F1F1938007B3395 /* WEntranceTableViewCell.m */,
+				0C390D1F1F1F1938007B3395 /* WEntranceTableViewCell.h */,
+				0C390D201F1F1938007B3395 /* WDeviceViewController.m */,
+				0C390D211F1F1938007B3395 /* WDeviceViewController.h */,
 				0C6706771ECD90CE00EB271F /* Main.storyboard */,
-				0C6706781ECD90CE00EB271F /* WDevicesTableViewController.h */,
-				0C6706791ECD90CE00EB271F /* WDevicesTableViewController.m */,
-				0C67067A1ECD90CE00EB271F /* WDeviceTableViewCell.h */,
-				0C67067B1ECD90CE00EB271F /* WDeviceTableViewCell.m */,
-				0C67067C1ECD90CE00EB271F /* WDeviceTableViewCell.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -259,10 +277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C390D261F1F1938007B3395 /* WEntranceTableViewCell.xib in Resources */,
+				0C390D241F1F1938007B3395 /* WEstateCollectionViewCell.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				0C6706801ECD90CE00EB271F /* WDeviceTableViewCell.xib in Resources */,
 				0C67067D1ECD90CE00EB271F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,10 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C390D271F1F1938007B3395 /* WEntranceTableViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* WAppDelegate.m in Sources */,
-				0C67067E1ECD90CE00EB271F /* WDevicesTableViewController.m in Sources */,
+				0C390D251F1F1938007B3395 /* WEstateCollectionViewCell.m in Sources */,
+				0C390D281F1F1938007B3395 /* WDeviceViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* WViewController.m in Sources */,
-				0C67067F1ECD90CE00EB271F /* WDeviceTableViewCell.m in Sources */,
+				0C390D231F1F1938007B3395 /* WSectionHeaderView.m in Sources */,
+				0C390D221F1F1938007B3395 /* WSelectEstateView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
