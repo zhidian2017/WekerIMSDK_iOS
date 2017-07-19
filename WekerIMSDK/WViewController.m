@@ -7,7 +7,6 @@
 //
 
 #import "WViewController.h"
-#import "WDevicesTableViewController.h"
 #import <WekerIM/WekerIM.h>
 
 @interface WViewController ()
