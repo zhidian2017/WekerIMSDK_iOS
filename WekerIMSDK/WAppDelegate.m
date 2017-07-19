@@ -8,7 +8,7 @@
 
 #import "WAppDelegate.h"
 #import <WekerIM/WekerIM.h>
-#import "WDevicesTableViewController.h"
+#import "WDeviceViewController.h"
 #import "WViewController.h"
 
 
@@ -32,7 +32,7 @@
 
 -(void)switchRootViewController {
     if ([WClient sharedManager].userAccount) {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[WDevicesTableViewController alloc] initWithStyle:UITableViewStylePlain]];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[WDeviceViewController new]];
         self.window.rootViewController = nav;
     } else {
         WViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
