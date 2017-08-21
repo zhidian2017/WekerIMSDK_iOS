@@ -152,7 +152,7 @@
 
   在回调block中，开发者可以根据开门是否成功做出不同的处理。
 
-* 获取用户所在小区列表`- (void)communityPartitionListWithCompleted:(void (^)(id result))completed` ,得到的数据可用`Estate`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
+* 获取用户所在小区分区信息列表`- (void)communityPartitionListWithCompleted:(void (^)(id result))completed` ,得到的数据可用`Estate`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
 
 
 ```objective-c
