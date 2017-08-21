@@ -45,6 +45,18 @@
 
 * 该SDK仅支持真机调试
 
+* 注意：在向AppStore提交审核之前，需要先移除 `Hyphenate` SDK中包含的i386 x86_64两个平台，才能正常提交审核
+
+  在路径下执行以下命令来删除i386 x86_64两个平台
+
+  ```
+  lipo Hyphenate.framework/Hyphenate -thin armv7 -output Hyphenate_armv7
+  lipo Hyphenate.framework/Hyphenate -thin arm64 -output Hyphenate_arm64
+  lipo -create Hyphenate_armv7 Hyphenate_arm64 -output Hyphenate
+  mv Hyphenate Hyphenate.framework/
+  ```
+
+
 * 编译工程，如果编译通过，恭喜你，集成 SDK 成功，可以进行下一步了，若报错，请联系我们进行协助
 
 * ` https://github.com/zhidian2017/WekerIMSDK_iOS`  该网址是SDK的Demo地址，可以作为参考
@@ -140,15 +152,15 @@
 
   在回调block中，开发者可以根据开门是否成功做出不同的处理。
 
-* 获取用户所在小区列表`- (void)communityListWithCompleted:(void (^)(id result))completed`，得到的数据可用`Estate`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
+* 获取用户所在小区列表`- (void)communityPartitionListWithCompleted:(void (^)(id result))completed` ,得到的数据可用`Estate`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
 
 
 ```objective-c
-    [[WClient sharedManager] communityListWithCompleted:^(id result) {
+	[[WClient sharedManager] communityPartitionListWithCompleted:^(id result) {
 		estates = [Estate mj_objectArrayWithKeyValuesArray:result];
     }];
 ```
-* 获取用户所在小区下门口机列表`- (void)loadEntranceDataWithCommunityId:(int)communityId`，得到的数据可用`Entrance`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
+* 根据小区Id `communityId` 获取用户所在小区下门口机列表 `- (void)entranceListWithCommunityId:(NSUInteger)communityId completed:(void (^)(id result))completed` ，得到的数据可用`Entrance`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
 
 
 ```objective-c
@@ -156,6 +168,22 @@
         entrances = [Entrance mj_objectArrayWithKeyValuesArray:result];
     }];
 ```
+* 根据分区Id `partitionId` 获取用户所在分区下门口机列表 ` - (void)entranceListWithPartitionId:(NSUInteger)partitionId completed:(void (^)(id result))completed` ，得到的数据可用`Entrance`属性解析，如下，当然，你也可以取出想要的数据并个性化展示：
+
+  ```objective-c
+      [[WClient sharedManager] entranceListWithPartitionId:partitionId completed:^(id result) {
+          entrances = [Entrance mj_objectArrayWithKeyValuesArray:result];
+      }];
+  ```
+
+* 获取某台门口机访客密码，未生效无法获取 `- (void)getEntrancePasswordWithEntrance:(Entrance *)entrance completed:(void (^)(NSString *password))completed` ,得到生效的密码或者未生效的提示字符串：
+
+  ```objective-c
+      [[WClient sharedManager] getEntrancePasswordWithEntrance:entrance completed:^(NSString *password) {
+          self.passwordLabel.text = password;
+      }];
+  ```
+
 * 门口机通知设置
 
 
