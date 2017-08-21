@@ -11,18 +11,8 @@
 
 extern NSString *const WEntranceTableViewCellIdentifier;
 
-@interface WEntrance : NSObject
-
-@property (nonatomic, copy) NSString *blockName;
-
-@property (nonatomic, assign) int entranceId;
-
-@property (nonatomic, strong) WDeviceEasemob *deviceEasemob;
-
-@end
-
 @interface WEntranceTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) WEntrance *entrance;
+@property (nonatomic, strong) Entrance *entrance;
 
 @end

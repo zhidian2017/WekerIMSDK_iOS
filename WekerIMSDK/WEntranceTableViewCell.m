@@ -13,21 +13,11 @@
 
 NSString *const WEntranceTableViewCellIdentifier = @"WEntranceTableViewCell";
 
-@interface WEntrance ()
-
-@end
-
-@implementation WEntrance
-
-+ (NSDictionary *)mj_replacedKeyFromPropertyName {
-    return @{@"entranceId":@"id",@"idefault":@"default"};
-}
-
-@end
-
 @interface WEntranceTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 
 @property (nonatomic, strong) CALayer *separator;
 
@@ -35,9 +25,12 @@ NSString *const WEntranceTableViewCellIdentifier = @"WEntranceTableViewCell";
 
 @implementation WEntranceTableViewCell
 
-- (void)setEntrance:(WEntrance *)entrance {
+- (void)setEntrance:(Entrance *)entrance {
     _entrance = entrance;
-    self.titleLabel.text = entrance.blockName;
+    self.titleLabel.text = entrance.name;
+    [[WClient sharedManager] getEntrancePasswordWithEntrance:entrance completed:^(NSString *password) {
+        self.passwordLabel.text = password;
+    }];
 }
 
 - (IBAction)unlockAction:(id)sender {

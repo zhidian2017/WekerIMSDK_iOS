@@ -25,8 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.userName.text = @"18857887481";
-    self.password.text = @"qwerty";
+    self.userName.text = @"15958143182";
+    self.password.text = @"123456";
 }
 
 - (IBAction)loginAction {

@@ -21,9 +21,8 @@
 
 @implementation WSectionHeaderView
 
-- (instancetype)initWithTitle:(NSString *)title {
-    self = [super initWithFrame:CGRectMake(0, 0, kScreenWidth, 47)];
-    if (self) {
+- (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title {
+    if (self = [super initWithFrame:frame]) {
         _title = title;
         [self createUI];
     }

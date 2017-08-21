@@ -36,6 +36,8 @@
     [super viewDidLoad];
 
     [self createUI];
+    
+    _dataArray = [NSMutableArray new];
 }
 
 - (void)createUI {
@@ -64,10 +66,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:refreshNotification object:nil];
 }
 
-- (void)loadDataWithCommunityId:(NSUInteger)communityId {
-    _dataArray = [NSMutableArray new];
-    [[WClient sharedManager] entranceListWithCommunityId:(int)communityId completed:^(id result) {
-        self.dataArray = [WEntrance mj_objectArrayWithKeyValuesArray:result];
+- (void)loadDataWithPartitionId:(NSUInteger)partitionId {
+    [[WClient sharedManager] entranceListWithPartitionId:partitionId completed:^(id result) {
+        self.dataArray = [Entrance mj_objectArrayWithKeyValuesArray:result];
         [self.tableView reloadData];
     }];
 }
@@ -98,12 +99,12 @@
     return cell;
 }
 
-- (void)selectEstateViewDidSelectEstateWithId:(NSUInteger)estateId {
-    [self loadDataWithCommunityId:estateId];
+- (void)selectEstateViewDidSelectPartitionWithId:(NSUInteger)partitionId {
+    [self loadDataWithPartitionId:partitionId];
 }
 
-- (void)selectEstateViewDidLoadDefaultEstateWithId:(NSUInteger)estateId {
-    [self loadDataWithCommunityId:estateId];
+- (void)selectEstateViewDidLoadDefaultPartitionWithId:(NSUInteger)partitionId {
+    [self loadDataWithPartitionId:partitionId];
 }
 
 #pragma mark - getter
@@ -121,7 +122,7 @@
 
 - (WSelectEstateView *)headerView {
     if (!_headerView) {
-        _headerView = [[WSelectEstateView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 137)];
+        _headerView = [[WSelectEstateView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 234)];
         _headerView.delegate = self;
     }
     return _headerView;
@@ -129,7 +130,7 @@
 
 - (WSectionHeaderView *)sectionHeaderView {
     if (!_sectionHeaderView) {
-        _sectionHeaderView = [[WSectionHeaderView alloc] initWithTitle:@"门禁列表"];
+        _sectionHeaderView = [[WSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 47) title:@"门禁列表"];
     }
     return _sectionHeaderView;
 }

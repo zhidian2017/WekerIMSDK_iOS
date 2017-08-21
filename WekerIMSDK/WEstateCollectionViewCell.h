@@ -10,18 +10,9 @@
 
 extern NSString *const WEstateCollectionViewCellIdentifier;
 
-@interface WEstate : NSObject
-
-@property (nonatomic, copy) NSString *communityName;
-
-@property (nonatomic, assign) int communityId;
-
-@property (nonatomic, assign) BOOL isSelected;
-
-@end
-
 @interface WEstateCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) WEstate *estate;
+@property (nonatomic, copy) NSString *title;
+
 
 @end

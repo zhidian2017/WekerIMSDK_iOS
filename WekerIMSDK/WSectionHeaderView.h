@@ -10,6 +10,6 @@
 
 @interface WSectionHeaderView : UIView
 
-- (instancetype)initWithTitle:(NSString *)title;
+- (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title;
 
 @end

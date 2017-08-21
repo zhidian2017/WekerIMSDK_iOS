@@ -10,19 +10,6 @@
 
 NSString *const WEstateCollectionViewCellIdentifier = @"WEstateCollectionViewCell";
 
-
-@interface WEstate ()
-
-@end
-
-@implementation WEstate
-
-+ (NSDictionary *)mj_replacedKeyFromPropertyName {
-    return @{@"communityId":@"id"};
-}
-
-@end
-
 @interface WEstateCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -31,13 +18,20 @@ NSString *const WEstateCollectionViewCellIdentifier = @"WEstateCollectionViewCel
 
 @implementation WEstateCollectionViewCell
 
-- (void)setEstate:(WEstate *)estate {
-    _estate = estate;
-    
-    self.titleLabel.text = estate.communityName;
-    
-    self.titleLabel.textColor = estate.isSelected ? [UIColor whiteColor] : [UIColor blackColor];
-    self.contentView.backgroundColor = estate.isSelected ? [UIColor lightGrayColor] : [UIColor whiteColor];
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    self.titleLabel.text = title;
+}
+
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    if (selected) {
+        self.titleLabel.textColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = [UIColor lightGrayColor];
+    } else {
+        self.titleLabel.textColor = [UIColor blackColor];
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 - (void)awakeFromNib {

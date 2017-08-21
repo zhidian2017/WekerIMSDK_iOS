@@ -11,12 +11,16 @@
 #import "WDeviceViewController.h"
 #import "WViewController.h"
 
+@interface WAppDelegate () <WClientDelegate>
+
+@end
 
 @implementation WAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[WClient sharedManager] initializeSDKWithDevApnsCertName:@"CloudDev" disApnsCertName:@"CloudDis"];
+    [WClient sharedManager].delegate = self;
     [self registerNotification:application];
     [[NSNotificationCenter defaultCenter] addObserverForName:@"SwitchRootViewController" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self switchRootViewController];
@@ -69,6 +73,10 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     [[WClient sharedManager] applicationWillEnterForeground:application];
+}
+
+- (void)userAccountDidLoginFromOtherDevice {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SwitchRootViewController" object:nil];
 }
 
 @end

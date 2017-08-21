@@ -12,9 +12,9 @@ extern NSString *const refreshNotification;
 
 @protocol WSelectEstateDelegate <NSObject>
 
-- (void)selectEstateViewDidLoadDefaultEstateWithId:(NSUInteger)estateId;
+- (void)selectEstateViewDidLoadDefaultPartitionWithId:(NSUInteger)partitionId;
 
-- (void)selectEstateViewDidSelectEstateWithId:(NSUInteger)estateId;
+- (void)selectEstateViewDidSelectPartitionWithId:(NSUInteger)partitionId;
 
 @end
 
